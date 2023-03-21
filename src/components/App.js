@@ -1,14 +1,14 @@
 import React, { Component, useState } from "react";
-import '../styles/App.css';
-import Home from "./Home";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import About from "./About";
+import Home from "./Home";
 import NoMatch from "./NoMatch";
+import '../styles/App.css';
 import LocationDisplay from "./LocationDisplay";
-import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
-    render() {
 
+    render() {
         return (
             <BrowserRouter>
                 <div id="main">
@@ -19,14 +19,10 @@ class App extends Component {
                     <Switch>
                         <Route exact path={'/'} component={Home} />
                         <Route exact path={'/about'} component={About} />
-                        <Route exact path={'*'} component={NoMatch} />
-
+                        <Route exact path={'/*'} component={NoMatch} />
                     </Switch>
-
                 </div>
             </BrowserRouter>
-
-
         )
     }
 }

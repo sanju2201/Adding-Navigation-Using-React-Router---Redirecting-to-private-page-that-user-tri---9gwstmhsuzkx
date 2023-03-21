@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 const LocationDisplay = () => {
-  const locattion = useLocation();
-  return <div data-testid="location-display">{locattion.pathname}</div>;
+  const location = useLocation();
+  return <div data-testid="location-display">{location.pathname}</div>;
 };
 export default LocationDisplay;
